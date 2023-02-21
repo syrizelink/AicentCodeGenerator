@@ -7,12 +7,13 @@
 
 body{
     height: 100vh;
-    background: linear-gradient(#f3f3fb 50%, #34bd77 50%);
+    background: linear-gradient(45deg, #C2FFD8
+    10%, #465EFB 100%);
 }
 
 .wrapper{
     background: #FFFFFF;
-    padding: 5em 4em;
+    padding: 2em 4em;
     position: absolute;
     width: 30em;
     transform: translate(-50%, -50%);
@@ -35,10 +36,36 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 30px;
 }
 
 .box button{
-    background: linear-gradient(#2AFADF , #4C83FF);
     border-radius: 0.3em;
     padding: 18px 45px;
+    outline: none;
+    font-size: 1em;
+    border: 3px solid #a3aab6;
+    color: #a3aab6;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.4s all;
+    background: transparent;
+}
+
+.box button:hover{
+    background: #a3aab6;
+    color: #FFFFFF;
+}
+
+.box button::after{
+    opacity: 0;
+    box-shadow: 0 0 0 6px #a3aab6;
+    transition: .3s;
+}
+
+.box button:active::after{
+    box-shadow: none;
+    opacity: 0.4;
+    transition: 0s;
 }
