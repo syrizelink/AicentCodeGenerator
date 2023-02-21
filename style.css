@@ -30,16 +30,54 @@ body{
     padding: 1em 1em;
     font-size: 1em;
     outline: none;
+    cursor: auto;
+    text-align: center;
 }
 
-.box{
+input:valid{
+    transition: 0.5s all;
+}
+
+.copyTip{
+    outline: none;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 70px;
+    top: 48px;
+}
+
+.copyTip button{
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    background-image: url("resourse/copy.svg");
+    transition: 0.3s all;
+    position: relative;
+}
+
+.copyTip button:disabled:hover{
+    background-image: url("resourse/copy.svg");
+    cursor: auto;
+}
+
+.copyTip button:hover{
+    background-image: url("resourse/copy_hover.svg");
+}
+
+.generate{
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 30px;
 }
 
-.box button{
+.generate button{
     border-radius: 0.3em;
     padding: 18px 45px;
     outline: none;
@@ -53,19 +91,37 @@ body{
     background: transparent;
 }
 
-.box button:hover{
+.generate button:hover{
     background: #a3aab6;
     color: #FFFFFF;
 }
 
-.box button::after{
+.generate button::after{
     opacity: 0;
     box-shadow: 0 0 0 6px #a3aab6;
     transition: .3s;
 }
 
-.box button:active::after{
+.generate button:active::after{
     box-shadow: none;
     opacity: 0.4;
     transition: 0s;
+}
+
+.copyComplete{
+    color: #ffffff;
+    font-size: small;
+    position: relative;
+    top: -18px;
+    transition: 0.7s all;
+    opacity: 1;
+}
+
+.copyCompleteIn{
+    color: #a3aab6;
+    transition: 0.4s all;
+    opacity: 0.75;
+    font-size: small;
+    position: relative;
+    top: -18px;
 }

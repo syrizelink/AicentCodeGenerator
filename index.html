@@ -7,12 +7,19 @@
 </head>
 <body>
 <div class="wrapper">
-    <input id="textArea" type="text" placeholder="此处将会生成字符" onclick="">
-    <div class="box">
+    <input id="textArea" type="text" placeholder="此处将会生成字符" readonly="readonly">
+    <div class="copyComplete" id="copyComplete">
+        已复制
+    </div>
+    <div class="copyTip">
+        <button id="copy" type="submit" onclick="copy()" disabled="disabled"></button>
+    </div>
+    <div class="generate">
         <button type="submit" onclick="AncientCode()">
             生成
         </button>
     </div>
+
     <script src="generate.js"></script>
 </div>
 </body>
