@@ -7,8 +7,32 @@
 
 body{
     height: 100vh;
-    background: linear-gradient(45deg, #C2FFD8
-    10%, #465EFB 100%);
+    background: linear-gradient(45deg, #C2FFD8 10%, #465EFB 100%);
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    cursor: default;
+}
+
+.wrapperBack{
+    background: #494c4d;
+    padding: 2em 4em;
+    position: absolute;
+    width: 30em;
+    height: 258px;
+    transform: translate(-55%, -58%);
+    top: 40%;
+    left: 50%;
+    border-radius: 1em;
+    border: 2em white;
+    box-shadow: 0 1em 5em rgba(5, 55, 3, 0.3);
+    opacity: 0.75;
 }
 
 .wrapper{
