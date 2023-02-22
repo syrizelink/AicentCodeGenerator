@@ -65,14 +65,37 @@ input:valid{
 .copyTip{
     outline: none;
     display: flex;
-    width: 24px;
+    width: 56px;
     height: 24px;
     position: absolute;
-    right: 70px;
+    right: 60px;
     top: 48px;
 }
 
-.copyTip button{
+#clear{
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    left: -8px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/clear.svg");
+    transition: 0.3s all;
+    position: relative;
+}
+
+#clear:hover{
+    background-image: url("../images/clear_hover.svg");
+}
+
+#clear:disabled:hover{
+    background-image: url("../images/clear.svg");
+    cursor: auto;
+}
+
+#copy{
     outline: none;
     display: inline-block;
     cursor: pointer;
@@ -85,12 +108,12 @@ input:valid{
     position: relative;
 }
 
-.copyTip button:disabled:hover{
+#copy:disabled:hover{
     background-image: url("../images/copy.svg");
     cursor: auto;
 }
 
-.copyTip button:hover{
+#copy:hover{
     background-image: url("../images/copy_hover.svg");
 }
 
@@ -142,7 +165,7 @@ input:valid{
 }
 
 .copyCompleteIn{
-    color: #ffffff;
+    color: #a3aab6;
     transition: 0.4s all;
     opacity: 0.75;
     font-size: small;

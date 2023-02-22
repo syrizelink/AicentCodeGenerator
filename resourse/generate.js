@@ -1,7 +1,10 @@
 let x = document.getElementById("copyComplete");
+let anime = document.getElementById("textArea");
 
-
-
+function clearText() {
+    document.getElementById("textArea").value = "";
+    x.className = 'copyComplete';
+}
 function numIn() {
     let x = document.getElementById("numChoose").value;
     document.getElementById("Value").innerHTML = x;
@@ -21,6 +24,8 @@ function AncientCodeText() {
     document.getElementById("textArea").value = AncientText;
 
     document.getElementById("copy").disabled = "";
+    document.getElementById("clear").disabled = "";
+
     x.className = "copyComplete";
 }
 
@@ -30,5 +35,6 @@ function copy() {
     if (document.execCommand("Copy")){
         document.execCommand("Copy");
     }
+    window.getSelection().removeAllRanges();
     x.className = 'copyCompleteIn';
 }
