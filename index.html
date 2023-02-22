@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>AicentCode</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resourse/style.css">
 </head>
 <body>
 <div class="wrapperBack">
     <div class="title">古体字生成器</div>
+    <div class="Choose">
+        <span id="Value">5</span>
+        <input id="numChoose" type="range" value="num" min="1" max="8" onload="numIn()" oninput="numIn()" onchange="numIn()">
+    </div>
 </div>
 <div class="wrapper">
     <input id="textArea" type="text" placeholder="此处将会生成字符" readonly="readonly">
@@ -18,12 +22,11 @@
         <button id="copy" type="submit" onclick="copy()" disabled="disabled"></button>
     </div>
     <div class="generate">
-        <button type="submit" onclick="AncientCode()">
-            生成
-        </button>
+        <div>
+            <button type="submit" onclick="AncientCodeText()">生成</button>
+        </div>
+    <script src="resourse/generate.js"></script>
     </div>
-
-    <script src="generate.js"></script>
 </div>
 </body>
 </html>

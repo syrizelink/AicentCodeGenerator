@@ -31,7 +31,7 @@ body{
     left: 50%;
     border-radius: 1em;
     border: 2em white;
-    box-shadow: 0 1em 5em rgba(5, 55, 3, 0.3);
+    box-shadow: 0 1em 5em rgba(3, 29, 55, 0.3);
     opacity: 0.75;
 }
 
@@ -44,7 +44,7 @@ body{
     top: 45%;
     left: 50%;
     border-radius: 1em;
-    box-shadow: 0 1em 5em rgba(5, 55, 3, 0.3);
+    box-shadow: 0 1em 5em rgba(3, 29, 55, 0.3);
 }
 
 #textArea{
@@ -80,18 +80,18 @@ input:valid{
     background-color: white;
     width: 24px;
     height: 24px;
-    background-image: url("resourse/copy.svg");
+    background-image: url("../images/copy.svg");
     transition: 0.3s all;
     position: relative;
 }
 
 .copyTip button:disabled:hover{
-    background-image: url("resourse/copy.svg");
+    background-image: url("../images/copy.svg");
     cursor: auto;
 }
 
 .copyTip button:hover{
-    background-image: url("resourse/copy_hover.svg");
+    background-image: url("../images/copy_hover.svg");
 }
 
 .generate{
@@ -142,10 +142,50 @@ input:valid{
 }
 
 .copyCompleteIn{
-    color: #a3aab6;
+    color: #ffffff;
     transition: 0.4s all;
     opacity: 0.75;
     font-size: small;
     position: relative;
     top: -18px;
+}
+
+#Value{
+    font-weight: bold;
+    color: #a3aab6;
+    position: absolute;
+    transform: translate(5000%, -42%);
+    -webkit-user-select: none;
+}
+
+.Choose{
+    width: 50px;
+    position: relative;
+    transform: translate(-130%, 100%);
+    appearance: none;
+}
+
+#numChoose{
+    position: absolute;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    transform: translate(255%);
+    height: 1px;
+    width: 120px;
+    border-radius: 2px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    background: #ffffff;
+    opacity: 0.75;
+    transition: all 0.2s ease-in-out;
+}
+
+#numChoose::-webkit-slider-thumb:hover{
+    transform: scale(1.3);
+}
+
+#numChoose::-webkit-slider-thumb{
+    transition: all 0.2s ease-in-out;
 }
